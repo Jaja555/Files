@@ -1,5 +1,3 @@
-numbers_file = open("numbers.txt")
-numbers_sum = 0
-for number in numbers_file:
-    numbers_sum += int(number)
-print(numbers_sum)
+file = open("my_first_file.txt", 'w')
+file.write("I just created my first file!")
+file.close()
