@@ -1,0 +1,13 @@
+symbols = ["-", ",", ".", "!", "?"]
+
+file = open("text.txt", "r")
+lines = file.readlines()
+file.close()
+
+for i in range(0, len(lines), 2):
+    line = lines[i].strip()
+    for symbol in symbols:
+        line = line.replace(symbol, "@")
+    words = line.split()
+    reversed_line = " ".join(words[::-1])
+    print(reversed_line)
